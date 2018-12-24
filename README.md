@@ -2,7 +2,7 @@
 
 starter pack for 42 project in C
 
-## Include
+## Included
 
 - libft (libc-like)
 - GNL (kind of gets)
