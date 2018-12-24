@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btrcount.c                                      :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgroc-de <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/22 12:31:02 by jgroc-de          #+#    #+#             */
-/*   Updated: 2018/12/22 12:31:25 by jgroc-de         ###   ########.fr       */
+/*   Created: 2018/12/23 21:09:18 by jgroc-de          #+#    #+#             */
+/*   Updated: 2018/12/23 21:09:20 by jgroc-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int	ft_btrcount(t_btree *root)
-{
-	int	i;
+# include "../libft.h"
+# define BUFF_SIZE 8
+# define ERROR -1
 
-	i = 1;
-	if (root)
-	{
-		i += ft_max(ft_btrcount(root->left), ft_btrcount(root->right));
-	}
-	if (!root)
-		return (0);
-	return (i);
-}
+#endif
